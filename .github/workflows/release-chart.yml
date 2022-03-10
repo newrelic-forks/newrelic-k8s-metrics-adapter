@@ -50,10 +50,10 @@ jobs:
       # release any chart. To force chart release to see the remaining history of this repo, we are removing the tag that
       # could exist in case of a previous pre-release. We are not going to fail in case we are not able to remove it as it
       # could not exist.
-      - name: Change chart's version if this run is a pre-release
+      - name: Remove from history previous chart prerelease
         if: ${{ ! github.event.input.prerelease }}
         run: |
-          CHART_VERSION=$(grep -E "^appVersion: " "./charts/${CHART_NAME}/Chart.yaml" | sed -e 's|^appVersion: \(.*\)|\1|')
+          CHART_VERSION=$(grep -E "^version: " "./charts/${CHART_NAME}/Chart.yaml" | sed -e 's|^version: \(.*\)|\1|')
           CHART_TAG_PRE="${CHART_NAME}-${CHART_VERSION}-pre"
           git tag --delete "${CHART_TAG_PRE}" || true
 
