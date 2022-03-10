@@ -101,11 +101,22 @@ jobs:
         with:
           fetch-depth: 0  # chart releaser needs all the history
 
+      # In case it is a pre-release we add `-pre` so it is not considered stable, so we can prerelease and test it properly.
       - name: Change chart's version if this run is a pre-release
         if: ${{ github.event.release.prerelease }}
         run: |
           sed -i 's|^version: \(.*\)|version: \1-pre|' ./charts/newrelic-k8s-metrics-adapter/Chart.yaml
           sed -i 's|^appVersion: \(.*\)|appVersion: \1-pre|' ./charts/newrelic-k8s-metrics-adapter/Chart.yaml
+
+      # Chart releaser is going to look for changes with the latest tag of this chart. This commit is going to be the same
+      # as when we pre-released so chart releaser is not going to see any changed in the helm chart and it is not going to
+      # release any chart. To force chart release to see the remaining history of this repo, we are removing the tag that
+      # could exist in case of a previous pre-release. We are not going to fail in case we are not able to remove it as it
+      # could not exist.
+      - name: Change chart's version if this run is a pre-release
+        if: ${{ ! github.event.input.prerelease }}
+        run: |
+          git tag --delete ${{ github.event.release.tag_name }}-pre || true
 
       - name: Configure Git
         run: |
