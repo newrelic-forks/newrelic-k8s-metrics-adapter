@@ -116,7 +116,9 @@ jobs:
       - name: Change chart's version if this run is a pre-release
         if: ${{ ! github.event.input.prerelease }}
         run: |
-          git tag --delete ${{ github.event.release.tag_name }}-pre || true
+          CHART_VERSION=$(grep -E "^appVersion: " ./charts/$CHART_NAME/Chart.yaml | sed -e 's|^appVersion: \(.*\)|appVersion: \1|')
+          CHART_TAG_PRE="${CHART_NAME}-${CHART_VERSION}-pre"
+          git tag --delete CHART_TAG_PRE || true
 
       - name: Configure Git
         run: |
