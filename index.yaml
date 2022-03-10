@@ -3,9 +3,9 @@ entries:
   newrelic-k8s-metrics-adapter:
   - apiVersion: v2
     appVersion: 0.3.0-pre
-    created: "2022-03-08T16:17:50.613018119Z"
+    created: "2022-03-10T10:42:10.511484928Z"
     description: A Helm chart to deploy the New Relic Kubernetes Metrics Adapter.
-    digest: a80aa9c9015036bb5bbec086935d20c69d20d77fddbe5009ebfc1790d935310d
+    digest: d33646d832009a59eb17c16fc82b3a5a455b74abe3fb10502cd505d904d1e9a5
     home: https://hub.docker.com/r/newrelic/newrelic-k8s-metrics-adapter
     icon: https://newrelic.com/assets/newrelic/source/NewRelic-logo-square.svg
     keywords:
@@ -23,30 +23,6 @@ entries:
     sources:
     - https://github.com/newrelic/newrelic-k8s-metrics-adapter
     urls:
-    - https://github.com/newrelic/newrelic-k8s-metrics-adapter/releases/download/newrelic-k8s-metrics-adapter-0.4.0-pre/newrelic-k8s-metrics-adapter-0.4.0-pre.tgz
+    - https://github.com/newrelic-forks/newrelic-k8s-metrics-adapter/releases/download/newrelic-k8s-metrics-adapter-0.4.0-pre/newrelic-k8s-metrics-adapter-0.4.0-pre.tgz
     version: 0.4.0-pre
-  - apiVersion: v2
-    appVersion: 0.3.0-pre
-    created: "2022-03-08T16:23:45.821457583Z"
-    description: A Helm chart to deploy the New Relic Kubernetes Metrics Adapter.
-    digest: f48e00f97d1dce45160a08976c795cd33ab0dc2ee97ce666623f8f6a31fd8fd5
-    home: https://hub.docker.com/r/newrelic/newrelic-k8s-metrics-adapter
-    icon: https://newrelic.com/assets/newrelic/source/NewRelic-logo-square.svg
-    keywords:
-    - infrastructure
-    - newrelic
-    - monitoring
-    maintainers:
-    - name: alvarocabanas
-    - name: carlossscastro
-    - name: gsanchezgavier
-    - name: kang-makes
-    - name: paologallinaharbur
-    - name: roobre
-    name: newrelic-k8s-metrics-adapter
-    sources:
-    - https://github.com/newrelic/newrelic-k8s-metrics-adapter
-    urls:
-    - https://github.com/newrelic/newrelic-k8s-metrics-adapter/releases/download/newrelic-k8s-metrics-adapter-0.4.0-pre/newrelic-k8s-metrics-adapter-0.4.0-pre.tgz
-    version: 0.4.0-pre
-generated: "2022-03-08T16:23:45.821468484Z"
+generated: "2022-03-10T10:42:10.511489928Z"
