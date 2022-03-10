@@ -2,10 +2,10 @@ apiVersion: v1
 entries:
   newrelic-k8s-metrics-adapter:
   - apiVersion: v2
-    appVersion: 0.3.4-pre
-    created: "2022-03-10T15:11:05.559576565Z"
+    appVersion: 0.3.5-pre
+    created: "2022-03-10T15:20:06.763914526Z"
     description: A Helm chart to deploy the New Relic Kubernetes Metrics Adapter.
-    digest: 8ef5491ac3516ec82a22d83f574426a5f572bf080721dfcaac6549ae3145bd1c
+    digest: 520729288bed6d15f25a90e9f7acefff797b28e7e0ca104b5fe593bca32a61ba
     home: https://hub.docker.com/r/newrelic/newrelic-k8s-metrics-adapter
     icon: https://newrelic.com/assets/newrelic/source/NewRelic-logo-square.svg
     keywords:
@@ -23,6 +23,6 @@ entries:
     sources:
     - https://github.com/newrelic/newrelic-k8s-metrics-adapter
     urls:
-    - https://github.com/newrelic-forks/newrelic-k8s-metrics-adapter/releases/download/newrelic-k8s-metrics-adapter-0.4.4-pre/newrelic-k8s-metrics-adapter-0.4.4-pre.tgz
-    version: 0.4.4-pre
-generated: "2022-03-10T15:11:05.559581865Z"
+    - https://github.com/newrelic-forks/newrelic-k8s-metrics-adapter/releases/download/newrelic-k8s-metrics-adapter-0.4.5-pre/newrelic-k8s-metrics-adapter-0.4.5-pre.tgz
+    version: 0.4.5-pre
+generated: "2022-03-10T15:20:06.763928326Z"
